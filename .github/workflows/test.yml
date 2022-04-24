@@ -4,5 +4,9 @@ jobs:
   print-hello-world:
     runs-on: ubuntu-latest
     steps:
-      -run: echo "hello world!!!"
-      -run: echo "this second step"
+      -uses: actions/checkout@v2
+      -name: "print hello"
+        run: echo "hello world!!!"
+      -uses: actions/checkout@v2
+      -name: "second job"
+        run: echo "this second step"
